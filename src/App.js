@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Clock from "./components/Clock";
+import Form from "./components/Form";
 import User from "./components/User";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <User info="User 03" />
         </ul>
         <Clock title="Current data naja = " />
+        <Form />
 
       </header>
     </div>
