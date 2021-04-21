@@ -1,22 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Clock from "./components/Clock";
+import User from "./components/User";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React 123
-        </a>
+        
+        <ul>
+          <User info="User 01" age="30" />
+          <User info="User 02" />
+          <User info="User 03" />
+        </ul>
+        <Clock title="Current data naja = " />
+
       </header>
     </div>
   );
