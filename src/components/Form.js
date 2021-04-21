@@ -12,16 +12,19 @@ class Form extends Component {
   }
 
   sayHi(){
-    console.log("click say hi");
-    // this.setState({message: "Hello " +this.state.name});
     this.props.onSayHi(this.state.name)
+    this.setState({name: ''});
+    
+    Array.from(document.querySelectorAll("input")).forEach(
+      input => (input.value = "")
+    );
   }
 
   render() {
     return (
       <div>
-        <input type="text" onKeyUp={this.handleData1}/>
-        <button onClick={() => this.sayHi()}>Say Hi</button>
+        <input type="text" onKeyUp={this.handleData1} />
+        <button onClick={() => this.sayHi()}>Add</button>
         
       </div>
     );
